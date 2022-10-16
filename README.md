@@ -34,3 +34,43 @@ Complexity Analysis
 |      1e+26 |      1.34052e+22 |      4.23909e+15 |      1.55206e+20 |      1.79699e+18 |      1.38583e+18 |             2.88806e+13 |
 |      1e+27 |      1.24306e+23 |      2.21051e+16 |      1.38592e+21 |      1.5452e+19  |      6.48691e+18 |             1.24306e+14 |
 |      1e+28 |      1.15586e+24 |      1.15586e+17 |      1.24267e+22 |      1.336e+20   |      3.03531e+19 |             5.36501e+14 |
+
+
+# prime_test_complexity_analysis.py
+
+|          n |     t_aks |        t_gordon |   t_miller_rabins |
+|-----------:|----------:|----------------:|------------------:|
+|     10     |     36.66 |               0 |       1.78        |
+|    100     |    293.27 |               0 |       3.16        |
+|   1000     |    989.77 |               1 |       5.62        |
+|  10000     |   2346.12 |               2 |      10           |
+| 100000     |   4582.27 |               7 |      17.78        |
+|      1e+06 |   7918.16 |              25 |      31.62        |
+|      1e+07 |  12573.8  |              85 |      56.23        |
+|      1e+08 |  18769    |             305 |     100           |
+|      1e+09 |  26723.8  |            1118 |     177.83        |
+|      1e+10 |  36658.2  |            4206 |     316.23        |
+|      1e+11 |  48792    |           16134 |     562.34        |
+|      1e+12 |  63345.3  |           62929 |    1000           |
+|      1e+13 |  80538    |          248885 |    1778.28        |
+|      1e+14 | 100590    |          996085 |    3162.28        |
+|      1e+15 | 123721    |         4027513 |    5623.41        |
+|      1e+16 | 150152    |        16430328 |   10000           |
+|      1e+17 | 180102    |        67554616 |   17782.8         |
+|      1e+18 | 213790    |       279688451 |   31622.8         |
+|      1e+19 | 251438    |      1165142407 |   56234.1         |
+|      1e+20 | 293265    |      4880821068 |  100000           |
+|      1e+21 | 339491    |     20548539294 |  177828           |
+|      1e+22 | 390336    |     86904216749 |  316228           |
+|      1e+23 | 446020    |    369060194247 |  562341           |
+|      1e+24 | 506762    |   1573247539747 |       1e+06       |
+|      1e+25 | 572784    |   6729862545101 |       1.77828e+06 |
+|      1e+26 | 644304    |  28880598040950 |       3.16228e+06 |
+|      1e+27 | 721543    | 124305978449185 |       5.62341e+06 |
+|      1e+28 | 804720    | 536500521771487 |       1e+07       |
+
+Gordon do not have a prime testing algo, we are talking about using prime counting algo to test primes in deterministic way.ie `is_prime(n)<==>(gordon_pi(n)-gordon_pi(n-1)==1)`
+
+# It is interesting to note gordon's method is not only faster than AKS but also miller rabins for n < 1e7. So till 1e7 we can use Gordon's prime counting to test primality over miller rabins. And if we are taking about deterministic then we can use Gordon over AKS till 1e12.
+
+# Another interesting think is from 1e25 onwards AKS is faster than Miller Rabins

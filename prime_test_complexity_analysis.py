@@ -21,7 +21,7 @@ while n < 10 ** 29:
     # Miller rabin probablistic _primality_test
     t_mr = n ** (1 / 4)
     # print(n, t_aks, t_gor, t_mr)
-    rows.append([n, "{:.2f}".format(t_aks), int(t_gor), "{:.2f}".format(t_mr)])
+    rows.append(["{:e}".format(n), "{:.2f}".format(t_aks), int(t_gor), "{:.2f}".format(t_mr)])
     n *= 10
 print(
     tabulate(
