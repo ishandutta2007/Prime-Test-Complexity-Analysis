@@ -1,5 +1,4 @@
 # Complexity-Analysis
-Complexity Analysis
 
 # prime_counting_complexity_analysis.py
 
