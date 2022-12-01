@@ -70,6 +70,6 @@
 
 Gordon do not have a prime testing algo, we are talking about using prime counting algo to test primes in deterministic way.ie `is_prime(n)<==>(gordon_pi(n)-gordon_pi(n-1)==1)`
 
-### It is interesting to note gordon's method is not only faster than AKS but also Miller Rabins for n < 1e7. So till 1e7 we can use Gordon's prime counting to test primality over Miller Rabins. And if we are taking about deterministic then we can use Gordon over AKS till 1e12.
+### It is interesting to note gordon's method is not only faster than AKS but also faster than Miller Rabins for n < 1e7. So till 1e7 we can use Gordon's prime counting to test primality over Miller Rabins. And if we are taking about deterministic then we can use Gordon over AKS till 1e12.
 
 ### Another interesting thing is from 1e23 onwards AKS is faster than Miller Rabins
